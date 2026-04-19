@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HEIC Image Converter</title>
+  <link rel="stylesheet" href="/src/styles.css" />
+</head>
+
+<body>
+  <main class="container">
+    <h1>HEIC → JPG Converter</h1>
+
+    <div id="drop-zone" class="drop-zone">
+      <div class="drop-zone-content">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+          <polyline points="17 8 12 3 7 8" />
+          <line x1="12" y1="3" x2="12" y2="15" />
+        </svg>
+        <p>Drag & drop HEIC files here</p>
+        <span class="drop-zone-or">or</span>
+        <button id="btn-browse" class="btn btn-primary">Browse Files</button>
+      </div>
+    </div>
+
+    <div id="controls" class="controls hidden">
+      <div class="quality-control">
+        <label for="quality-slider">JPEG Quality: <span id="quality-value">92</span>%</label>
+        <input type="range" id="quality-slider" min="10" max="100" value="92" />
+      </div>
+      <button id="btn-convert" class="btn btn-convert">Convert All</button>
+    </div>
+
+    <div id="file-list" class="file-list"></div>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
